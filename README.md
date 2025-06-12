@@ -21,33 +21,29 @@ ShadowBox is a Python-based tool that simulates silent cyberattacks within isola
 
 ### Installation
 
-Step 1: Clone the repository
+###Step 1: Clone the repository
 
 ```bash
 git clone <your-repo-url>
 cd <your-repo-directory>
-Step 2: Install dependencies
+###Step 2: Install dependencies
 bash
-Copy
-Edit
 pip install fastapi uvicorn docker openai google-cloud-logging python-dotenv
 Environment Setup
 Create a .env file in the root directory with the following content:
 
 env
-Copy
-Edit
+
 OPENAI_API_KEY=your_openai_api_key
 GOOGLE_APPLICATION_CREDENTIALS=path_to_your_gcp_service_account.json
 GCP_PROJECT_ID=your_gcp_project_id
 Alternatively, you can export these variables in your shell.
 
-Running the Application
-Start the FastAPI application locally using:
+###Running the Application
+##Start the FastAPI application locally using:
 
 bash
-Copy
-Edit
+
 uvicorn CyberSecurity:app --reload
 Visit http://localhost:8000 to interact with the service.
 
@@ -63,8 +59,7 @@ Starts a simulated cyberattack.
 
 Request Body Example
 json
-Copy
-Edit
+
 {
   "environment_image": "python:3.10-slim",
   "attack_type": "privilege_escalation"
@@ -87,15 +82,15 @@ docker run -p 8000:8000 --env-file .env shadowbox
 CI/CD
 A sample GitHub Actions workflow is provided in the code. It includes automated:
 
-Building
+###Building
 
-Testing
+###Testing
 
-Deployment to Google Cloud Run
+###Deployment to Google Cloud Run
 
-You can adapt this workflow to any CI/CD system such as GitLab CI, CircleCI, or Jenkins.
+###You can adapt this workflow to any CI/CD system such as GitLab CI, CircleCI, or Jenkins.
 
-Notes
+###Notes
 The simulation logic is mocked for safety. Extend the simulate_attack function for realistic use cases.
 
 Google Cloud Logging is optional. If not configured, logs will be printed to the console.
