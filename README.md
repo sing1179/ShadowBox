@@ -21,7 +21,7 @@ ShadowBox is a Python-based tool that simulates silent cyberattacks within isola
 
 ### Installation
 
-#### Step 1: Clone the repository
+Step 1: Clone the repository
 
 ```bash
 git clone <your-repo-url>
