@@ -21,7 +21,7 @@ ShadowBox is a Python-based tool that simulates silent cyberattacks within isola
 
 ### Installation
 
-###Step 1: Clone the repository
+Step 1: Clone the repository
 
 ```bash
 git clone <your-repo-url>
@@ -39,8 +39,8 @@ GOOGLE_APPLICATION_CREDENTIALS=path_to_your_gcp_service_account.json
 GCP_PROJECT_ID=your_gcp_project_id
 Alternatively, you can export these variables in your shell.
 
-###Running the Application
-##Start the FastAPI application locally using:
+Running the Application
+Start the FastAPI application locally using:
 
 bash
 
@@ -82,15 +82,15 @@ docker run -p 8000:8000 --env-file .env shadowbox
 CI/CD
 A sample GitHub Actions workflow is provided in the code. It includes automated:
 
-###Building
+Building
 
-###Testing
+Testing
 
-###Deployment to Google Cloud Run
+Deployment to Google Cloud Run
 
-###You can adapt this workflow to any CI/CD system such as GitLab CI, CircleCI, or Jenkins.
+You can adapt this workflow to any CI/CD system such as GitLab CI, CircleCI, or Jenkins.
 
-###Notes
+Notes
 The simulation logic is mocked for safety. Extend the simulate_attack function for realistic use cases.
 
 Google Cloud Logging is optional. If not configured, logs will be printed to the console.
